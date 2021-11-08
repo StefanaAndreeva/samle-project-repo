@@ -1,0 +1,29 @@
+<ng-container *ngIf="definitions$ |async as definitions">
+  <div>
+    <label for="category">CATEGORY</label>
+    <app-custom-select #categorySelect
+      [width]="200"
+      [items]="getCategories(definitions)">
+    </app-custom-select>
+  </div>
+  <div>
+    <label for="model">MODEL</label>
+    <app-custom-select #modelSelect
+      [disabled]="disabled"
+      [width]="200"
+      [items]="getModels(definitions, categorySelect.selectedItem)">
+    </app-custom-select>
+  </div>
+  <div class="actions">
+    <app-custom-button
+      [disabled]="actionButtonDisabled"
+      (buttonClick)="onItemAdd(definitions)">
+      ADD
+    </app-custom-button>
+    <app-custom-button
+      (buttonClick)="onCancel()">
+      CANCEL
+    </app-custom-button>
+  </div>
+</ng-container>
+

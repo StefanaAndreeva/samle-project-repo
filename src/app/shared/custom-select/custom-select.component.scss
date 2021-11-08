@@ -1,0 +1,60 @@
+@import '../../styles';
+
+.select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: rem(36px);
+  font-size: rem(16px);
+  border: rem(1px) solid rgb(0 0 0 / 26%);
+  background-color: $ID_LightGrey;
+  border-radius: 2px;
+  cursor: pointer;
+
+  > div {
+    flex-grow: 1;
+    height: 100%;
+    padding: rem(8px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: initial;
+  }
+}
+
+i.material-icons {
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+i:hover {
+  font-weight: bolder;
+}
+
+.items {
+  position: absolute;
+  background-color: $ID_DirtyGrey;
+  box-shadow: 0 rem(1px) rem(3px) 0 rgb(0 0 0 / 26%);
+  z-index: 500;
+}
+
+.item {
+  padding: rem(8px);
+  font-size: rem(14px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $ID_BaseOchra-600;
+  }
+
+  &.selected {
+    background-color: $ID_BaseOchra-800;
+  }
+}
+

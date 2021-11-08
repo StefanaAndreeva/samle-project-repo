@@ -1,0 +1,43 @@
+@import '../../styles';
+
+$table_border: rem(2px) solid $ID_White;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  margin-left: rem(40px);
+  height: 100%;
+}
+
+app-custom-details-list {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  padding: rem(8px);
+  justify-content: space-between;
+  margin-bottom: rem(6px);
+  height: rem(38px);
+
+  > h3 {
+    margin: 0;
+  }
+}
+
+.table {
+  color: $ID_Black-800;
+  width: 100%;
+  border: $table_border;
+  border-collapse: collapse;
+  background-color: $ID_LightGrey;
+  font-size: rem(14px);
+  margin-bottom: rem(10px);
+
+  > tr td {
+    padding: 12px;
+    border: $table_border;
+  }
+}

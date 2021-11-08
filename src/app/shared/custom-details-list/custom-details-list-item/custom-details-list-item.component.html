@@ -1,0 +1,18 @@
+<div class="item" [class.expanded]="isExpanded">
+  <div class="item-name"
+    [@highlightSelected]="isSelected ? 'selected' : ''"
+    (click)="onClick()">
+    <i class="material-icons">{{icon}}</i>
+    <span>{{text}}</span>
+    <button *ngIf="hasShowDetailsButton && isExpanded"
+      [class.selected]="isSelected"
+      (click)="onButtonClick($event)">
+      Show details
+    </button>
+  </div>
+  <div [@openClose]="isExpanded ? 'open' : 'closed'">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+

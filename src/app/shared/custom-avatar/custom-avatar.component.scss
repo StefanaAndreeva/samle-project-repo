@@ -1,0 +1,11 @@
+@import '../../styles';
+
+div {
+  width: rem(32px);
+  height: rem(32px);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $ID_BaseOchra-600;
+}

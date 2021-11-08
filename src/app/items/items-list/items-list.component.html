@@ -1,0 +1,72 @@
+<ng-container *ngIf="definitions$ | async as definitions">
+  <div class="list-container">
+    <div class="buttons">
+      <app-custom-link-buttom
+        [icon]="'add'"
+        [text]="'New Item Definition'"
+        [disabled]="currentUser?.role !== 'admin'"
+        (buttonClick)="newItemPopup.open()">
+      </app-custom-link-buttom>
+      <app-custom-link-buttom
+        [icon]="'add'"
+        [text]="'New Category Definition'"
+        [disabled]="currentUser?.role !== 'admin'"
+        (buttonClick)="newCategoryPopup.open()">
+      </app-custom-link-buttom>
+    </div>
+    <app-custom-details-list
+      [hasExpandCollapseButtons]="true"
+      [headerText]="'Inventory Categories'"
+      [height]="'90%'">
+      <app-custom-details-list-item #items
+        *ngFor="let definition of definitions"
+        [text]="definition.category | titlecase">
+        <div class="list-content">
+            <table class="table">
+              <tr>
+                <th>Model</th>
+                <th *ngIf="definition.category === 'accessories'">Type</th>
+                <th>Total</th>
+                <th>Unsassigned</th>
+                <th></th>
+              </tr>
+              <tr *ngFor="let item of definition.items">
+                <td>{{item.manufacturer | titlecase}} {{item.series}} {{item.model}}</td>
+                <td class="number" *ngIf="definition.category === 'accessories'">{{item.type}}</td>
+                <td class="number">{{item.count}}</td>
+                <td class="number">{{item.free}}</td>
+                <td align="center" valign="center">
+                  <app-custom-button (buttonClick)="openDetailsView(definition.category, item)">
+                    View details
+                  </app-custom-button>
+                </td>
+              </tr>
+            </table>
+        </div>
+      </app-custom-details-list-item>
+    </app-custom-details-list>
+  </div>
+  <app-custom-popup #detailsPopup
+    [width]="'80%'"
+    [title]="title"
+    [hasActionButtons]="false"
+    [hasCloseButton]="true">
+    <app-item-detail *ngIf="items$ | async as items" [items]="items">
+    </app-item-detail>
+  </app-custom-popup>
+  <app-custom-popup #newItemPopup
+    [disableActionButton]="isAddNewDefButtonDisabled(def)"
+    [title]="'New item definition'"
+    (popupClose)="addNewItemDefinition($event)">
+    <app-add-item-definition #def [categories]="getCategories(definitions)">
+    </app-add-item-definition>
+  </app-custom-popup>
+  <app-custom-popup #newCategoryPopup
+    [disableActionButton]="isNewCategoryButtonDisabled(category)"
+    [title]="'Add new category'"
+    (popupClose)="addNewCategory($event)">
+    <app-add-new-category #category></app-add-new-category>
+  </app-custom-popup>
+</ng-container>
+
+

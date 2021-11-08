@@ -1,0 +1,11 @@
+@import '../../styles';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+> label {
+  color: $ID_Black-800;
+}

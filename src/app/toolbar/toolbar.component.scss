@@ -1,0 +1,24 @@
+ @import '../styles';
+
+:host {
+  width: 100%;
+  background-color: $ID_BaseGreen;
+  padding: rem(16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+i.material-icons {
+  color: $ID_White;
+  margin-left: rem(12px);
+  background-color: $ID_BaseOchra;
+  padding: rem(10px);
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Stefana Andreeva",
+      "email": "sandreeva@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 2,
+      "name": "Verzhiniya Andreeva",
+      "email": "vandreeva@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 3,
+      "name": "Radoslav Karaivanov",
+      "email": "rkaraivanov@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 4,
+      "name": "Vasil Georgiev",
+      "email": "vgeorgiev@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 5,
+      "name": "Petko Bozhinov",
+      "email": "pbozhinov@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 6,
+      "name": "Maria Atanasova",
+      "email": "matanasova@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 7,
+      "name": "Monika Stefanova",
+      "email": "mstefanova@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 8,
+      "name": "Ivan Ivanov",
+      "email": "iivanov@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 9,
+      "name": "Konstantin Kolev",
+      "email": "kkolev@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 10,
+      "name": "Aleksander Ganchev",
+      "email": "aganchev@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 11,
+      "name": "Hristina Manolova",
+      "email": "hmanolova@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 12,
+      "name": "Kiril Stoyanov",
+      "email": "kstoyanov@it-economics.bg",
+      "role": "viewer"
+    },
+    {
+      "id": 13,
+      "name": "Admin",
+      "email": "admin@it-economics.bg",
+      "role": "admin"
+    }
+  ]
+}

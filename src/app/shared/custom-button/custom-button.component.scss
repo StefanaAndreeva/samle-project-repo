@@ -1,0 +1,24 @@
+@import '../../styles';
+
+button {
+  padding: rem(8px) rem(16px);
+  border-radius: rem(2px);
+  font-size: rem(14px);
+  cursor: pointer;
+  background-color: $ID_BaseOchra-800;
+  color: $ID_Black-800;
+  border: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.disabled {
+    opacity: 0.4;
+    cursor:initial;
+  }
+
+  &:hover:not(.disabled) {
+    opacity: 0.8;
+  }
+}

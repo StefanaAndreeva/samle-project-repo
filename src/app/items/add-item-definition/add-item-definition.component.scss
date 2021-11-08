@@ -1,0 +1,12 @@
+@import '../../styles';
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(10px);
+
+  > label {
+    color: $ID_Black-800;
+  }
+}

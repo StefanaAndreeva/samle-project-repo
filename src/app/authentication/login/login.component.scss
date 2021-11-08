@@ -1,0 +1,68 @@
+@import '../../styles';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $ID_White;
+  color: $ID_Black-800;
+  min-height: rem(200px);
+  min-width: rem(350px);
+  z-index: 1000;
+  padding: rem(20px);
+  border-radius: rem(2px);
+  box-shadow: 0 rem(1px) rem(3px) 0 rgb(0 0 0 / 36%);
+}
+
+h3, span {
+  color: $ID_Black-800;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(16px) 0;
+  width: rem(280px);
+
+  app-custom-input, app-custom-link-buttom {
+    width: 100%;
+    margin-bottom: rem(16px);
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  app-custom-button:first-child {
+    margin-right: rem(4px);
+  }
+}
+
+i.material-icons {
+  color: $ID_Black-800;
+  padding: rem(2px);
+  box-sizing: rem(2px);
+  cursor: pointer;
+
+  &:hover {
+    color: $ID_Black;
+    background-color: $ID_LightGrey;
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $ID_Lavender;
+  z-index: 900;
+  background-image: linear-gradient(55deg, $ID_Grey, $ID_Lavender);
+}

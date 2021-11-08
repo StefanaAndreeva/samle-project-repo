@@ -1,0 +1,9 @@
+
+<ng-container *ngTemplateOutlet="imgSource ? imageTemplate: initialsTemplate"></ng-container>
+
+<ng-template #imageTemplate>
+  <div [style.backgroundImage]="getSrcUrl()"></div>
+</ng-template>
+<ng-template #initialsTemplate>
+  <div>{{initials}}</div>
+</ng-template>

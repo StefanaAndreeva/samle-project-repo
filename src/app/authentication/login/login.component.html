@@ -1,0 +1,20 @@
+<div class="modal">
+  <h3>LOGIN</h3>
+  <span>Please enter your credentials to log in.</span>
+  <div class="modal-body">
+    <app-custom-input #username
+      [placeholder]="'username'">
+    </app-custom-input>
+    <app-custom-input #password
+      [type]="'password'"
+      [placeholder]="'password'">
+    </app-custom-input>
+    <app-custom-link-buttom
+      [width]="'100%'"
+      [text]="'LOGIN'"
+      [disabled]="!username.value || !password.value"
+      (buttonClick)="login(username.value, password.value)">
+    </app-custom-link-buttom>
+  </div>
+</div>
+<div class="modal-background"></div>

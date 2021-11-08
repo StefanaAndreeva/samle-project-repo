@@ -1,0 +1,8 @@
+@import './styles';
+
+$header-height: rem(80px);
+
+.router-container {
+  padding: rem(40px);
+  height: calc(100vh - #{$header-height});
+}

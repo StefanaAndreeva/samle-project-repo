@@ -1,0 +1,59 @@
+@import '../../styles';
+
+h1 {
+  font-size: rem(24px);
+  color: $ID_White;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  > span {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: inherit;
+    > span {
+      cursor: inherit;
+    }
+  }
+}
+
+a:hover:not(.disabled) {
+  opacity: 0.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: rem(2px);
+  font-size: rem(16px);
+  cursor: pointer;
+  border: none;
+  padding: rem(8px) rem(16px);
+
+  &:hover:not(.header):not(a.disabled) {
+    background-color: $ID_BaseOchra;
+  }
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.fancy-button {
+  background-color: $ID_BaseGreen;
+  color: $ID_White;
+}
+
+.fancy-button i.material-icons {
+  color: $ID_White;
+  padding-right: rem(4px);
+}

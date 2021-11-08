@@ -1,0 +1,16 @@
+@import '../../styles';
+
+input {
+  min-height: rem(36px);
+  font-size: rem(16px);
+  border-radius: rem(2px);
+  padding: rem(8px);
+  border: 1px solid $ID_Transparent;
+  background-color: $ID_LightGrey;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-color: $ID_Grey;
+  }
+}

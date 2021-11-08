@@ -1,0 +1,10 @@
+<div class="search-box" [style.width.px]="width">
+  <i *ngIf="!focus" class="material-icons">search</i>
+  <input placeholder="Search"
+    [(ngModel)]="searchValue"
+    (focus)="focus = true"
+    (blur)="focus = false"
+    (ngModelChange)="onModelChange()"/>
+  <i *ngIf="searchValue" class="material-icons clear" (click)="onClear()">close</i>
+</div>
+

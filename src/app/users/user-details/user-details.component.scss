@@ -1,0 +1,48 @@
+@import '../../styles';
+
+$table_border: rem(2px) solid $ID_White;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(80px);
+  align-items: flex-start;
+}
+
+app-custom-link-buttom {
+  padding: rem(4px) 0;
+}
+
+.table {
+  color: $ID_Black-800;
+  width: 100%;
+  border: $table_border;
+  border-collapse: collapse;
+  background-color: $ID_LightGrey;
+
+  > tr td {
+    padding: 12px;
+    border: $table_border;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      > span {
+        padding: rem(4px);
+
+        &.date {
+          font-size: rem(14px);
+        }
+      }
+    }
+  }
+
+  tr:first-child {
+    font-weight: bolder;
+  }
+}
+
+app-user-item {
+  margin-top: rem(40px);
+}

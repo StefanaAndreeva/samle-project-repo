@@ -1,0 +1,57 @@
+@import '../../styles';
+
+$table_border: rem(2px) solid $ID_White;
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.list-container {
+  width: 100%;
+  // height: 100%;
+}
+
+.table {
+  color: $ID_Black-800;
+  width: 100%;
+  border: $table_border;
+  border-collapse: collapse;
+  background-color: $ID_LightGrey;
+  font-size: rem(14px);
+  margin-bottom: rem(10px);
+
+  > tr td, th {
+    padding: 12px;
+    border: $table_border;
+    border-left: none;
+    border-right: none;
+  }
+
+  th {
+    background-color: $ID_BaseOchra-800;
+
+    &:first-child {
+      text-align: start;
+    }
+  }
+
+  table-layout: fixed
+}
+
+.number {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  height: 10%;
+  align-items: flex-start;
+
+  :first-child {
+    margin-right: rem(10px);
+  }
+}
+
+
+

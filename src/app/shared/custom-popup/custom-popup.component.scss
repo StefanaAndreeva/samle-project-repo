@@ -1,0 +1,65 @@
+@import '../../styles';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $ID_White;
+  color: $ID_Black-800;
+  min-height: rem(200px);
+  min-width: rem(400px);
+  z-index: 1000;
+  padding: rem(16px);
+  border-radius: rem(4px);
+  box-shadow: 0 rem(1px) rem(3px) 0 rgb(0 0 0 / 36%);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-body {
+  padding: rem(16px) 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  app-custom-button:first-child {
+    margin-right: rem(4px);
+  }
+}
+
+i.material-icons {
+  color: $ID_Black-800;
+  padding: rem(2px);
+  box-sizing: rem(2px);
+  cursor: pointer;
+
+  &:hover {
+    color: $ID_Black;
+    background-color: $ID_LightGrey;
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $ID_Black-800;
+  opacity: 0.8;
+  z-index: 900;
+}

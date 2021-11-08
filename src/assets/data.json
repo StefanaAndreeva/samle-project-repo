@@ -1,0 +1,492 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "category": "laptop",
+      "model": 1,
+      "serialNumber": "abc-123",
+      "assignedTo": "Stefana Andreeva",
+      "assignedDate": "2020-03-09T22:18:26.625Z"
+    },
+    {
+      "id": 2,
+      "category": "laptop",
+      "model": 1,
+      "serialNumber": "xyz-123-deff",
+      "assignedTo": "Verzhiniya Andreeva",
+      "assignedDate": "2021-10-21T22:18:26.625Z"
+    },
+    {
+      "id": 3,
+      "category": "laptop",
+      "model": 2,
+      "serialNumber": "xyz-gh-deff",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 4,
+      "category": "laptop",
+      "model": 3,
+      "serialNumber": "xyz-gh-deff",
+      "assignedTo": "Radoslav Karaivanov",
+      "assignedDate": "2020-07-15T22:18:26.625Z"
+    },
+    {
+      "id": 5,
+      "category": "laptop",
+      "model": 3,
+      "serialNumber": "394-abd-398-dm2",
+      "assignedTo": "Vasil Georgiev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 6,
+      "category": "laptop",
+      "model": 4,
+      "serialNumber": "abd-4kk4-dm2",
+      "assignedTo": "Petko Bozhinov",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 7,
+      "category": "laptop",
+      "model": 4,
+      "serialNumber": "111-SA-4kop-dm2",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 8,
+      "category": "laptop",
+      "model": 5,
+      "serialNumber": "4kop-dm2:cv:ss",
+      "assignedTo": "Maria Atanasova",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 9,
+      "category": "laptop",
+      "model": 6,
+      "serialNumber": "faKg-UI:22:aSNka",
+      "assignedTo": "Monika Stefanova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 10,
+      "category": "laptop",
+      "model": 6,
+      "serialNumber": "faSkla-dkq:3#i12",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 11,
+      "category": "laptop",
+      "model": 1,
+      "serialNumber": "99002ASFD",
+      "assignedTo": "Ivan Ivanov",
+      "assignedDate": "2021-11-15T22:18:26.625Z"
+    },
+    {
+      "id": 12,
+      "category": "laptop",
+      "model": 2,
+      "serialNumber": "QQ-AA-777:x",
+      "assignedTo": "Konstantin Kolev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 13,
+      "category": "laptop",
+      "model": 1,
+      "serialNumber": "hh-xxx-3",
+      "assignedTo": "Aleksander Ganchev",
+      "assignedDate": "2020-12-08T22:18:26.625Z"
+    },
+    {
+      "id": 14,
+      "category": "laptop",
+      "model": 4,
+      "serialNumber": "aa:sdfg:ww:opq",
+      "assignedTo": "Hristina Manolova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 15,
+      "category": "laptop",
+      "model": 6,
+      "serialNumber": "3h3hh:i22-asWWq",
+      "assignedTo": "Kiril Stoyanov",
+      "assignedDate": "2021-11-21T22:18:26.625Z"
+    },
+    {
+      "id": 16,
+      "category": "headset",
+      "model": 1,
+      "serialNumber": "askj-234-KK",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 17,
+      "category": "headset",
+      "model": 2,
+      "serialNumber": "xyz-123-aaa-33",
+      "assignedTo": "Verzhiniya Andreeva",
+      "assignedDate": "2021-10-21T22:18:26.625Z"
+    },
+    {
+      "id": 18,
+      "category": "headset",
+      "model": 3,
+      "serialNumber": "xyz-gh-deff-12:111",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 19,
+      "category": "headset",
+      "model": 3,
+      "serialNumber": "AA:SS:1-aHU",
+      "assignedTo": "Radoslav Karaivanov",
+      "assignedDate": "2020-07-15T22:18:26.625Z"
+    },
+    {
+      "id": 20,
+      "category": "headset",
+      "model": 3,
+      "serialNumber": "x-abd-398-dm2",
+      "assignedTo": "Vasil Georgiev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 21,
+      "category": "headset",
+      "model": 4,
+      "serialNumber": "nmnmnmn:aaa:sss",
+      "assignedTo": "Petko Bozhinov",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 22,
+      "category": "headset",
+      "model": 4,
+      "serialNumber": "111-SA:AAAA:148P",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 23,
+      "category": "headset",
+      "model": 1,
+      "serialNumber": "AA-dm2:cKK:s11",
+      "assignedTo": "Maria Atanasova",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 24,
+      "category": "headset",
+      "model": 2,
+      "serialNumber": "faaaa:AA:2a",
+      "assignedTo": "Monika Stefanova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 25,
+      "category": "headset",
+      "model": 3,
+      "serialNumber": "f334#a-dkq:3#i12",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 26,
+      "category": "headset",
+      "model": 1,
+      "serialNumber": "9AQ:002-ASFD",
+      "assignedTo": "Ivan Ivanov",
+      "assignedDate": "2021-11-15T22:18:26.625Z"
+    },
+    {
+      "id": 27,
+      "category": "headset",
+      "model": 2,
+      "serialNumber": "pp-AA-nn:12",
+      "assignedTo": "Konstantin Kolev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 28,
+      "category": "headset",
+      "model": 3,
+      "serialNumber": "1:22:fff-alo",
+      "assignedTo": "Aleksander Ganchev",
+      "assignedDate": "2020-12-08T22:18:26.625Z"
+    },
+    {
+      "id": 29,
+      "category": "headset",
+      "model": 4,
+      "serialNumber": "AA:Faw-19901KM",
+      "assignedTo": "Hristina Manolova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 30,
+      "category": "headset",
+      "model": 2,
+      "serialNumber": "3h3AL:22q",
+      "assignedTo": "Kiril Stoyanov",
+      "assignedDate": "2021-11-21T22:18:26.625Z"
+    },
+    {
+      "id": 31,
+      "category": "mouse",
+      "model": 1,
+      "serialNumber": "MM:J-2L:A",
+      "assignedTo": "Stefana Andreeva",
+      "assignedDate": "2020-03-09T22:18:26.625Z"
+    },
+    {
+      "id": 32,
+      "category": "mouse",
+      "model": 2,
+      "serialNumber": "AL12-aaa-33",
+      "assignedTo": "Verzhiniya Andreeva",
+      "assignedDate": "2021-10-21T22:18:26.625Z"
+    },
+    {
+      "id": 33,
+      "category": "mouse",
+      "model": 1,
+      "serialNumber": "xSeff-12:lL1",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 34,
+      "category": "mouse",
+      "model": 5,
+      "serialNumber": "KKJL:2s23:wwq",
+      "assignedTo": "Radoslav Karaivanov",
+      "assignedDate": "2020-07-15T22:18:26.625Z"
+    },
+    {
+      "id": 35,
+      "category": "mouse",
+      "model": 3,
+      "serialNumber": "x-aSLL-d2:w",
+      "assignedTo": "Vasil Georgiev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 36,
+      "category": "mouse",
+      "model": 4,
+      "serialNumber": "nmq-28snmn:14",
+      "assignedTo": "Petko Bozhinov",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 37,
+      "category": "mouse",
+      "model": 2,
+      "serialNumber": "11WE-MTP",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 38,
+      "category": "mouse",
+      "model": 6,
+      "serialNumber": "S:s11",
+      "assignedTo": "Maria Atanasova",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 39,
+      "category": "mouse",
+      "model": 5,
+      "serialNumber": "p:s:s::AA:2a",
+      "assignedTo": "Monika Stefanova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 40,
+      "category": "mouse",
+      "model": 3,
+      "serialNumber": "fiii-4#a-dkq2",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 41,
+      "category": "mouse",
+      "model": 1,
+      "serialNumber": "a9AQ:002-ASFD",
+      "assignedTo": "Ivan Ivanov",
+      "assignedDate": "2021-11-15T22:18:26.625Z"
+    },
+    {
+      "id": 42,
+      "category": "mouse",
+      "model": 5,
+      "serialNumber": "impro:nn:12",
+      "assignedTo": "Konstantin Kolev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 43,
+      "category": "mouse",
+      "model": 3,
+      "serialNumber": "22:s:fff-alniuy",
+      "assignedTo": "Aleksander Ganchev",
+      "assignedDate": "2020-12-08T22:18:26.625Z"
+    },
+    {
+      "id": 44,
+      "category": "mouse",
+      "model": 4,
+      "serialNumber": "11:f:1KM",
+      "assignedTo": "Hristina Manolova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 45,
+      "category": "mouse",
+      "model": 2,
+      "serialNumber": "3JJ-S:aa:22",
+      "assignedTo": "Kiril Stoyanov",
+      "assignedDate": "2021-11-21T22:18:26.625Z"
+    },
+    {
+      "id": 46,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "qwe23",
+      "assignedTo": "Stefana Andreeva",
+      "assignedDate": "2020-03-09T22:18:26.625Z"
+    },
+    {
+      "id": 47,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "2-2-3jkj",
+      "assignedTo": "Verzhiniya Andreeva",
+      "assignedDate": "2021-10-21T22:18:26.625Z"
+    },
+    {
+      "id": 48,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "ff-12:w1",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 49,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "2s23:wwq",
+      "assignedTo": "Radoslav Karaivanov",
+      "assignedDate": "2020-07-15T22:18:26.625Z"
+    },
+    {
+      "id": 50,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "d2:w:t",
+      "assignedTo": "Vasil Georgiev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 51,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "4:28snmn:1",
+      "assignedTo": "Petko Bozhinov",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 52,
+      "category": "mouse",
+      "model": 1,
+      "serialNumber": "asWE-MTP",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 53,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "S:AA:2",
+      "assignedTo": "Maria Atanasova",
+      "assignedDate": "2020-08-01T22:18:26.625Z"
+    },
+    {
+      "id": 54,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "p:AA:2a",
+      "assignedTo": "Monika Stefanova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 55,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "f-r-dkq2",
+      "assignedTo": "",
+      "assignedDate": ""
+    },
+    {
+      "id": 56,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "aASFD",
+      "assignedTo": "Ivan Ivanov",
+      "assignedDate": "2021-11-15T22:18:26.625Z"
+    },
+    {
+      "id": 57,
+      "category": "mouse",
+      "model": 2,
+      "serialNumber": "i:w:Eee",
+      "assignedTo": "Konstantin Kolev",
+      "assignedDate": "2020-17-05T22:18:26.625Z"
+    },
+    {
+      "id": 58,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "2:aln:u0",
+      "assignedTo": "Aleksander Ganchev",
+      "assignedDate": "2020-12-08T22:18:26.625Z"
+    },
+    {
+      "id": 59,
+      "category": "accessories",
+      "model": 1,
+      "serialNumber": "1it&8KM",
+      "assignedTo": "Hristina Manolova",
+      "assignedDate": "2021-08-26T22:18:26.625Z"
+    },
+    {
+      "id": 60,
+      "category": "accessories",
+      "model": 2,
+      "serialNumber": "k:99:22",
+      "assignedTo": "Kiril Stoyanov",
+      "assignedDate": "2021-11-21T22:18:26.625Z"
+    },
+    {
+      "id": 61,
+      "category": "laptop",
+      "model": 3,
+      "serialNumber": "jjkjjj-123",
+      "assignedTo": "",
+      "assignedDate": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<app-custom-link-buttom
+  routerLink="/"
+  [icon]="'home'"
+  [isHeader]="true"
+  [text]="'Inventory Management'">
+</app-custom-link-buttom>
+<div>
+  <app-custom-link-buttom
+    routerLink="/items"
+    [icon]="'widgets'"
+    [text]="'Manage Items'">
+  </app-custom-link-buttom>
+  <app-custom-link-buttom
+    routerLink="/users"
+    [icon]="'manage_accounts'"
+    [text]="'Manage Users'">
+  </app-custom-link-buttom>
+  <i class="material-icons"
+    (click)="this.confirmDialog.open()">
+    logout
+  </i>
+  <app-custom-popup #confirmDialog
+    [title]="'Confirm'"
+    (popupClose)="onLogout($event)">
+    Are you sure you want to log out?
+  </app-custom-popup>
+</div>
+
+

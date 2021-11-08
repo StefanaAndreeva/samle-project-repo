@@ -1,0 +1,23 @@
+<div *ngIf="show" [style.width]="width" class="modal">
+  <header class="modal-header">
+      <h3>{{title}}</h3>
+      <i class="material-icons clear" *ngIf="hasCloseButton" (click)="this.close()">close</i>
+  </header>
+  <div class="modal-body">
+    <ng-content></ng-content>
+  </div>
+  <div *ngIf="hasActionButtons" class="modal-footer">
+    <app-custom-button
+      [width]="100"
+      (buttonClick)="onClose(false)">
+      CANCEL
+    </app-custom-button>
+    <app-custom-button
+      [width]="100"
+      [disabled]="disableActionButton"
+      (buttonClick)="onClose(true)">
+      OK
+    </app-custom-button>
+  </div>
+</div>
+<div *ngIf="show" class="modal-background"></div>

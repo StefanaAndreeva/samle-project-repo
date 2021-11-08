@@ -1,0 +1,40 @@
+@import '../../styles/';
+
+.search-box {
+  display: flex;
+  border: rem(1px) solid $ID_BaseGreen;
+  border-radius: rem(4px);
+  padding: rem(4px);
+  box-shadow: 0 rem(1px) rem(3px) 0 rgb(0 0 0 / 26%);
+
+  &:hover {
+    box-shadow: 0 rem(1px) rem(3px) 0 rgb(0 0 0 / 36%);
+  }
+}
+
+i.material-icons {
+  color: $ID_BaseGreen;
+  padding-right: rem(4px);
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: $ID_White;
+  cursor: pointer;
+  width: 100%;
+  border-radius: rem(4px);
+  font-size: rem(16px);
+  margin-right: rem(2px);
+
+  &:focus {
+    background-color: $ID_DirtyGrey;
+  }
+}
+
+.clear:hover {
+  cursor: pointer;
+  &:hover {
+    font-weight: bolder;
+  }
+}

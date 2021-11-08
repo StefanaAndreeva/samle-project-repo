@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <div class="menu-bar">
+      <app-custom-search-box [(searchValue)]="searchValue">
+      </app-custom-search-box>
+    </div>
+    <ng-container *ngIf="users$ | async as users">
+      <ul class="items">
+        <li *ngFor="let user of users | search:searchValue:mapFn; trackBy: trackById"
+          [routerLinkActive]="'selected'">
+          <div class="item">
+            <a [routerLink]="[user.id]">
+              <app-custom-avatar [initials]="user.name | initials">
+              </app-custom-avatar>
+              <div class="content">
+                <span>{{user.name}}</span>
+                <span>{{user.email}}</span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+  <div class="outlet-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

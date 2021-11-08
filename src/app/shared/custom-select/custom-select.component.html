@@ -1,0 +1,16 @@
+<div class="select"
+  [class.disabled]="disabled"
+  [style.width.px]="width"
+  (click)="onOpen()">
+  <div>{{selectedItem | titlecase}}</div>
+  <i class="material-icons">{{icon}}</i>
+</div>
+<div *ngIf="isOpen" class="items"
+  [class.disabled]="disabled"
+  [style.width.px]="width">
+  <div class="item" *ngFor="let item of items"
+    [class.selected]="item === selectedItem"
+    (click)="onOptionSelect(item)">
+    {{item | titlecase}}
+  </div>
+</div>

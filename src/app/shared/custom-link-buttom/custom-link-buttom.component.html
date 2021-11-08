@@ -1,0 +1,14 @@
+<a class="button fancy-button"
+  [class.disabled]="disabled"
+  [class.header]="isHeader"
+  [style.width]="width"
+  [style.height.px]="height">
+  <i *ngIf="icon" class="material-icons">{{icon}}</i>
+  <h1 *ngIf="isHeader; else simple">{{text}}</h1>
+</a>
+
+<ng-template #simple>
+  <span>
+    {{text}}
+  </span>
+</ng-template>

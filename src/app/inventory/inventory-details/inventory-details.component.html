@@ -1,0 +1,50 @@
+
+
+<div class="container">
+  <app-custom-details-list
+    [height]="'100%'"
+    [headerTemplate]="header"
+    [headerText]="user.name">
+    <app-custom-details-list-item #items
+      *ngFor="let item of user.inventory"
+      [text]="item.category | titlecase"
+      (itemSelected)="onItemSelected($event)">
+      <table class="table">
+        <tr *ngIf="item.category === 'accessories'">
+          <td>Type</td>
+          <td>{{item.details?.type}}</td>
+        </tr>
+        <tr>
+          <td>Manufacturer</td>
+          <td>{{item.details?.manufacturer}}</td>
+        </tr>
+        <tr *ngIf="item.details">
+          <td>Model</td>
+          <td>{{getItemInfo(item.details)}}</td>
+        </tr>
+        <tr>
+          <td>Serial number</td>
+          <td>{{item.serialNumber}}</td>
+        </tr>
+        <tr>
+          <td>Date Assigned</td>
+          <td>{{item.assignedDate | date}}</td>
+        </tr>
+      </table>
+    </app-custom-details-list-item>
+  </app-custom-details-list>
+</div>
+
+<ng-template #header>
+  <div class="header">
+    <h3>{{user.name}}</h3>
+    <a [href]="'mailto:' + user.email">
+      {{user.email}}
+    </a>
+  </div>
+</ng-template>
+
+
+
+
+

@@ -1,0 +1,32 @@
+<ng-container *ngIf="users$ | async as users">
+  <div class="list-container">
+    <app-custom-details-list
+      [hasExpandCollapseButtons]="true"
+      [headerText]="'Users Inventory'"
+      [height]="'100%'">
+      <app-custom-details-list-item #items
+        *ngFor="let user of users; trackBy: trackById"
+        [hasShowDetailsButton]="true"
+        [text]="user.name"
+        (showDetails)="onShowDetails($event, user)">
+        <div class="list-content">
+          <div class="list-item" *ngFor="let item of user.inventory">
+            <div><b>{{item.category | titlecase}}</b></div>
+            <span *ngIf="item.category === 'accessories'">
+              {{item.details?.type | titlecase}}
+            </span>
+            <span>{{item.details?.manufacturer}}</span>
+            <span>{{item.details?.series}}</span>
+            <span>{{item.details?.model}}</span>
+          </div>
+        </div>
+      </app-custom-details-list-item>
+    </app-custom-details-list>
+  </div>
+  <div class="details-container" *ngIf="inventoryViewState.selectedUser$ | async as user">
+    <app-inventory-details [user]="user">
+    </app-inventory-details>
+  </div>
+</ng-container>
+
+

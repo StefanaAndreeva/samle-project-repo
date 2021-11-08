@@ -1,0 +1,30 @@
+<!-- <ng-container *ngTemplateOutlet="headerTemplate || defaultHeaderTemplate">
+</ng-container>
+<div [style.height]="height" class="items-container">
+  <div>
+    <ng-content select="app-custom-details-list-item"></ng-content>
+  </div>
+</div> -->
+<div [style.height]="height">
+  <ng-container *ngTemplateOutlet="headerTemplate || defaultHeaderTemplate">
+  </ng-container>
+  <div class="items-container">
+    <div>
+      <ng-content select="app-custom-details-list-item"></ng-content>
+    </div>
+  </div>
+</div>
+
+<ng-template #defaultHeaderTemplate>
+  <div *ngIf="headerText || hasExpandCollapseButtons" class="header">
+    <h3 *ngIf="headerText">{{headerText}}</h3>
+    <div *ngIf="hasExpandCollapseButtons">
+      <button (click)="expandAll()">
+        Expand All
+      </button>
+      <button (click)="collapseAll()">
+        Collapse All
+      </button>
+    </div>
+  </div>
+</ng-template>

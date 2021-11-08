@@ -1,0 +1,95 @@
+@import '../../styles';
+
+:host {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+
+  > div:first-child {
+    width: 60%;
+  }
+}
+
+.menu-bar {
+  padding: rem(8px) 0;
+}
+
+.items {
+  list-style-type: none;
+  width: 100%;
+
+  height: 90%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+}
+
+.items li {
+  position: relative;
+  cursor: pointer;
+}
+
+.items a {
+  color: $ID_Black-800;
+  text-decoration: none;
+  display: flex;
+  font-size: rem(16px);
+  background-color: $ID_LightGrey;
+  margin: 0 rem(2px) rem(2px) 0;
+  padding: rem(8px);
+  width: 100%;
+}
+
+.items a:hover {
+  color: $ID_Black;
+  opacity: 0.8;
+  background-color: $ID_White;
+  cursor: pointer;
+}
+
+.items .selected a {
+  background-color: $ID_BaseOchra-800;
+  color: $ID_Black;
+}
+
+.items .selected .badge {
+  color: $ID_Black;
+}
+
+.items .selected a:hover {
+  background-color: $ID_BaseOchra;
+}
+
+.mark {
+  background-color: $ID_BaseGreen;
+  width: rem(6px);
+  margin: 0 0 rem(2px) rem(2px);
+}
+
+app-custom-avatar {
+  margin-left: rem(8px);
+}
+
+.items .content {
+  display: flex;
+  flex-direction: column;
+  font-size: rem(14px);
+  color: $ID_Black-800;
+  margin-left: rem(20px);
+
+  & >span:first-child {
+    font-size: rem(16px);
+    font-weight: bold;
+  }
+}
+
+.outlet-container {
+  width: 40%;
+}

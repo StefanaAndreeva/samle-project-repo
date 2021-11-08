@@ -1,0 +1,19 @@
+@import '../../styles';
+
+label {
+  font-size: rem(14px);
+  font-weight: bolder;
+  color: $ID_Black-800;
+}
+
+div {
+  margin-bottom: rem(12px);
+}
+
+.actions {
+  display: flex;
+
+  :first-child {
+    margin-right: rem(4px);
+  }
+}

@@ -1,0 +1,51 @@
+<div class="details" *ngIf="user$ | async as user">
+  <app-custom-link-buttom
+    [icon]="'add'"
+    [text]="'New item'"
+    [disabled]="currentUser?.role !== 'admin'"
+    (buttonClick)="onAddNewItem()">
+  </app-custom-link-buttom>
+  <table class="table">
+    <tr>
+      <td colspan="3">{{user.name}}</td>
+    </tr>
+    <tr *ngFor="let item of user.inventory">
+      <td>{{item.category | titlecase}}</td>
+      <td>
+        <ng-container *ngTemplateOutlet="details; context: { $implicit: item }">
+        </ng-container>
+      </td>
+      <td align="center">
+        <ng-container *ngTemplateOutlet="removeBtn; context: { $implicit: item }">
+        </ng-container>
+      </td>
+    </tr>
+  </table>
+  <app-user-item *ngIf="showAddInventoryItem"
+    (add)="onItemAdd()"
+    (cancel)="showAddInventoryItem = false">
+  </app-user-item>
+</div>
+
+<app-custom-popup #confirmDialog
+  [title]="'Confirm'"
+  (popupClose)="onConfirmRemove($event)">
+  Are you sure you want to remove this?
+</app-custom-popup>
+
+<ng-template #details let-item>
+  <div>
+    <span>{{getItemInfo(item)}}</span>
+    <span class="date">
+      <b>Date assigned:</b> {{getAssignedDate(item) | date}}
+    </span>
+  </div>
+</ng-template>
+
+<ng-template #removeBtn let-item>
+  <app-custom-button
+    [disabled]="currentUser?.role !== 'admin'"
+    (buttonClick)="onItemRemove(item)">
+    Remove
+  </app-custom-button>
+</ng-template>

@@ -1,0 +1,30 @@
+@import '../../styles';
+
+$table_border: rem(2px) solid $ID_White;
+
+.container {
+  display: flex;
+  margin-top: rem(20px);
+}
+
+.table {
+  flex-grow: 1;
+  color: $ID_Black-800;
+  width: rem(500px);
+  border: $table_border;
+  border-collapse: collapse;
+  background-color: $ID_LightGrey;
+
+  > tr td, th {
+    padding: 12px;
+    border: $table_border;
+  }
+
+  tr:first-child {
+    font-weight: bolder;
+  }
+
+  td:first-child {
+    width: rem(50px);
+  }
+}
