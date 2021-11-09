@@ -22,7 +22,7 @@ export class LoginComponent implements OnDestroy {
     this.route.queryParams
     .pipe(takeUntil(this._destroy$))
     .subscribe(params => {
-      this.navigationUrl = this.router.getCurrentNavigation()?.extras.state?.url;
+      this.navigationUrl = this.router.getCurrentNavigation()?.extras.state?.url ?? '/';
     })
   }
 
