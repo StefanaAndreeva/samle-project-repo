@@ -2,490 +2,433 @@
   "items": [
     {
       "id": 1,
-      "category": "laptop",
-      "model": 1,
+      "definitionId": 1,
       "serialNumber": "abc-123",
-      "assignedTo": "Stefana Andreeva",
+      "userId": 1,
       "assignedDate": "2020-03-09T22:18:26.625Z"
     },
     {
       "id": 2,
-      "category": "laptop",
-      "model": 1,
+      "definitionId": 1,
       "serialNumber": "xyz-123-deff",
-      "assignedTo": "Verzhiniya Andreeva",
+      "userId": 2,
       "assignedDate": "2021-10-21T22:18:26.625Z"
     },
     {
       "id": 3,
-      "category": "laptop",
-      "model": 2,
+      "definitionId": 2,
       "serialNumber": "xyz-gh-deff",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 4,
-      "category": "laptop",
-      "model": 3,
+      "definitionId": 3,
       "serialNumber": "xyz-gh-deff",
-      "assignedTo": "Radoslav Karaivanov",
+      "userId": 3,
       "assignedDate": "2020-07-15T22:18:26.625Z"
     },
     {
       "id": 5,
-      "category": "laptop",
-      "model": 3,
+      "definitionId": 3,
       "serialNumber": "394-abd-398-dm2",
-      "assignedTo": "Vasil Georgiev",
+      "userId": 4,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
+
     {
       "id": 6,
-      "category": "laptop",
-      "model": 4,
+      "definitionId": 4,
       "serialNumber": "abd-4kk4-dm2",
-      "assignedTo": "Petko Bozhinov",
+      "userId": 5,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 7,
-      "category": "laptop",
-      "model": 4,
+      "definitionId": 4,
       "serialNumber": "111-SA-4kop-dm2",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 8,
-      "category": "laptop",
-      "model": 5,
+      "definitionId": 5,
       "serialNumber": "4kop-dm2:cv:ss",
-      "assignedTo": "Maria Atanasova",
+      "userId": 6,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 9,
-      "category": "laptop",
-      "model": 6,
+      "definitionId": 6,
       "serialNumber": "faKg-UI:22:aSNka",
-      "assignedTo": "Monika Stefanova",
+      "userId": 7,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 10,
-      "category": "laptop",
-      "model": 6,
+      "definitionId": 6,
       "serialNumber": "faSkla-dkq:3#i12",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 11,
-      "category": "laptop",
-      "model": 1,
+      "definitionId": 1,
       "serialNumber": "99002ASFD",
-      "assignedTo": "Ivan Ivanov",
+      "userId": 8,
       "assignedDate": "2021-11-15T22:18:26.625Z"
     },
     {
       "id": 12,
-      "category": "laptop",
-      "model": 2,
+      "definitionId": 2,
       "serialNumber": "QQ-AA-777:x",
-      "assignedTo": "Konstantin Kolev",
+      "userId": 9,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 13,
-      "category": "laptop",
-      "model": 1,
+      "definitionId": 1,
       "serialNumber": "hh-xxx-3",
-      "assignedTo": "Aleksander Ganchev",
+      "userId": 10,
       "assignedDate": "2020-12-08T22:18:26.625Z"
     },
     {
       "id": 14,
-      "category": "laptop",
-      "model": 4,
+      "definitionId": 4,
       "serialNumber": "aa:sdfg:ww:opq",
-      "assignedTo": "Hristina Manolova",
+      "userId": 11,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 15,
-      "category": "laptop",
-      "model": 6,
+      "definitionId": 6,
       "serialNumber": "3h3hh:i22-asWWq",
-      "assignedTo": "Kiril Stoyanov",
+      "userId": 12,
       "assignedDate": "2021-11-21T22:18:26.625Z"
     },
+
+
     {
       "id": 16,
-      "category": "headset",
-      "model": 1,
+      "definitionId": 7,
       "serialNumber": "askj-234-KK",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 17,
-      "category": "headset",
-      "model": 2,
+      "definitionId": 8,
       "serialNumber": "xyz-123-aaa-33",
-      "assignedTo": "Verzhiniya Andreeva",
+      "userId": 2,
       "assignedDate": "2021-10-21T22:18:26.625Z"
     },
     {
       "id": 18,
-      "category": "headset",
-      "model": 3,
+      "definitionId": 9,
       "serialNumber": "xyz-gh-deff-12:111",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 19,
-      "category": "headset",
-      "model": 3,
+      "definitionId": 9,
       "serialNumber": "AA:SS:1-aHU",
-      "assignedTo": "Radoslav Karaivanov",
+      "userId": 3,
       "assignedDate": "2020-07-15T22:18:26.625Z"
     },
+
     {
       "id": 20,
-      "category": "headset",
-      "model": 3,
+      "definitionId": 9,
       "serialNumber": "x-abd-398-dm2",
-      "assignedTo": "Vasil Georgiev",
+      "userId": 4,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 21,
-      "category": "headset",
-      "model": 4,
+      "definitionId": 10,
       "serialNumber": "nmnmnmn:aaa:sss",
-      "assignedTo": "Petko Bozhinov",
+      "userId": 5,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 22,
-      "category": "headset",
-      "model": 4,
+      "definitionId": 10,
       "serialNumber": "111-SA:AAAA:148P",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 23,
-      "category": "headset",
-      "model": 1,
+      "definitionId": 7,
       "serialNumber": "AA-dm2:cKK:s11",
-      "assignedTo": "Maria Atanasova",
+      "userId": 6,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 24,
-      "category": "headset",
-      "model": 2,
+      "definitionId": 8,
       "serialNumber": "faaaa:AA:2a",
-      "assignedTo": "Monika Stefanova",
+      "userId": 7,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 25,
-      "category": "headset",
-      "model": 3,
+      "definitionId": 9,
       "serialNumber": "f334#a-dkq:3#i12",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 26,
-      "category": "headset",
-      "model": 1,
+      "definitionId": 7,
       "serialNumber": "9AQ:002-ASFD",
-      "assignedTo": "Ivan Ivanov",
+      "userId": 8,
       "assignedDate": "2021-11-15T22:18:26.625Z"
     },
     {
       "id": 27,
-      "category": "headset",
-      "model": 2,
+      "definitionId": 8,
       "serialNumber": "pp-AA-nn:12",
-      "assignedTo": "Konstantin Kolev",
+      "userId": 9,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 28,
-      "category": "headset",
-      "model": 3,
+      "definitionId": 9,
       "serialNumber": "1:22:fff-alo",
-      "assignedTo": "Aleksander Ganchev",
+      "userId": 10,
       "assignedDate": "2020-12-08T22:18:26.625Z"
     },
     {
       "id": 29,
-      "category": "headset",
-      "model": 4,
+      "definitionId": 10,
       "serialNumber": "AA:Faw-19901KM",
-      "assignedTo": "Hristina Manolova",
+      "userId": 11,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 30,
-      "category": "headset",
-      "model": 2,
+      "definitionId": 8,
       "serialNumber": "3h3AL:22q",
-      "assignedTo": "Kiril Stoyanov",
+      "userId": 12,
       "assignedDate": "2021-11-21T22:18:26.625Z"
     },
     {
       "id": 31,
-      "category": "mouse",
-      "model": 1,
+      "definitionId": 11,
       "serialNumber": "MM:J-2L:A",
-      "assignedTo": "Stefana Andreeva",
+      "userId": 1,
       "assignedDate": "2020-03-09T22:18:26.625Z"
     },
     {
       "id": 32,
-      "category": "mouse",
-      "model": 2,
+      "definitionId": 12,
       "serialNumber": "AL12-aaa-33",
-      "assignedTo": "Verzhiniya Andreeva",
+      "userId": 2,
       "assignedDate": "2021-10-21T22:18:26.625Z"
     },
     {
       "id": 33,
-      "category": "mouse",
-      "model": 1,
+      "definitionId": 11,
       "serialNumber": "xSeff-12:lL1",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 34,
-      "category": "mouse",
-      "model": 5,
+      "definitionId": 15,
       "serialNumber": "KKJL:2s23:wwq",
-      "assignedTo": "Radoslav Karaivanov",
+      "userId": 3,
       "assignedDate": "2020-07-15T22:18:26.625Z"
     },
     {
       "id": 35,
-      "category": "mouse",
-      "model": 3,
+      "definitionId": 13,
       "serialNumber": "x-aSLL-d2:w",
-      "assignedTo": "Vasil Georgiev",
+      "userId": 4,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 36,
-      "category": "mouse",
-      "model": 4,
+      "definitionId": 14,
       "serialNumber": "nmq-28snmn:14",
-      "assignedTo": "Petko Bozhinov",
+      "userId": 5,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 37,
-      "category": "mouse",
-      "model": 2,
+      "definitionId": 12,
       "serialNumber": "11WE-MTP",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 38,
-      "category": "mouse",
-      "model": 6,
+      "definitionId": 16,
       "serialNumber": "S:s11",
-      "assignedTo": "Maria Atanasova",
+      "userId": 6,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 39,
-      "category": "mouse",
-      "model": 5,
+      "definitionId": 15,
       "serialNumber": "p:s:s::AA:2a",
-      "assignedTo": "Monika Stefanova",
+      "userId": 7,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 40,
-      "category": "mouse",
-      "model": 3,
+      "definitionId": 13,
       "serialNumber": "fiii-4#a-dkq2",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 41,
-      "category": "mouse",
-      "model": 1,
+      "definitionId": 11,
       "serialNumber": "a9AQ:002-ASFD",
-      "assignedTo": "Ivan Ivanov",
+      "userId": 8,
       "assignedDate": "2021-11-15T22:18:26.625Z"
     },
     {
       "id": 42,
-      "category": "mouse",
-      "model": 5,
+      "definitionId": 15,
       "serialNumber": "impro:nn:12",
-      "assignedTo": "Konstantin Kolev",
+      "userId": 9,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 43,
-      "category": "mouse",
-      "model": 3,
+      "definitionId": 13,
       "serialNumber": "22:s:fff-alniuy",
-      "assignedTo": "Aleksander Ganchev",
+      "userId": 10,
       "assignedDate": "2020-12-08T22:18:26.625Z"
     },
     {
       "id": 44,
-      "category": "mouse",
-      "model": 4,
+      "definitionId": 14,
       "serialNumber": "11:f:1KM",
-      "assignedTo": "Hristina Manolova",
+      "userId": 11,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 45,
-      "category": "mouse",
-      "model": 2,
+      "definitionId": 12,
       "serialNumber": "3JJ-S:aa:22",
-      "assignedTo": "Kiril Stoyanov",
+      "userId": 12,
       "assignedDate": "2021-11-21T22:18:26.625Z"
     },
     {
       "id": 46,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "qwe23",
-      "assignedTo": "Stefana Andreeva",
+      "userId": 1,
       "assignedDate": "2020-03-09T22:18:26.625Z"
     },
     {
       "id": 47,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "2-2-3jkj",
-      "assignedTo": "Verzhiniya Andreeva",
+      "userId": 2,
       "assignedDate": "2021-10-21T22:18:26.625Z"
     },
     {
       "id": 48,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "ff-12:w1",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 49,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "2s23:wwq",
-      "assignedTo": "Radoslav Karaivanov",
+      "userId": 3,
       "assignedDate": "2020-07-15T22:18:26.625Z"
     },
     {
       "id": 50,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "d2:w:t",
-      "assignedTo": "Vasil Georgiev",
+      "userId": 4,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 51,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "4:28snmn:1",
-      "assignedTo": "Petko Bozhinov",
+      "userId": 5,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 52,
-      "category": "mouse",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "asWE-MTP",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 53,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "S:AA:2",
-      "assignedTo": "Maria Atanasova",
+      "userId": 6,
       "assignedDate": "2020-08-01T22:18:26.625Z"
     },
     {
       "id": 54,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "p:AA:2a",
-      "assignedTo": "Monika Stefanova",
+      "userId": 7,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 55,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 18,
       "serialNumber": "f-r-dkq2",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     },
     {
       "id": 56,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "aASFD",
-      "assignedTo": "Ivan Ivanov",
+      "userId": 8,
       "assignedDate": "2021-11-15T22:18:26.625Z"
     },
     {
       "id": 57,
-      "category": "mouse",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "i:w:Eee",
-      "assignedTo": "Konstantin Kolev",
+      "userId": 9,
       "assignedDate": "2020-17-05T22:18:26.625Z"
     },
     {
       "id": 58,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "2:aln:u0",
-      "assignedTo": "Aleksander Ganchev",
+      "userId": 10,
       "assignedDate": "2020-12-08T22:18:26.625Z"
     },
     {
       "id": 59,
-      "category": "accessories",
-      "model": 1,
+      "definitionId": 17,
       "serialNumber": "1it&8KM",
-      "assignedTo": "Hristina Manolova",
+      "userId": 11,
       "assignedDate": "2021-08-26T22:18:26.625Z"
     },
     {
       "id": 60,
-      "category": "accessories",
-      "model": 2,
+      "definitionId": 18,
       "serialNumber": "k:99:22",
-      "assignedTo": "Kiril Stoyanov",
+      "userId": 12,
       "assignedDate": "2021-11-21T22:18:26.625Z"
     },
     {
       "id": 61,
-      "category": "laptop",
-      "model": 3,
+      "definitionId": 3,
       "serialNumber": "jjkjjj-123",
-      "assignedTo": "",
+      "userId": null,
       "assignedDate": ""
     }
   ]

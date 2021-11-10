@@ -1,0 +1,132 @@
+{
+  "definitions": [
+    {
+      "id": 1,
+      "category": "Laptop",
+      "manufacturer": "Lenovo",
+      "series": "ThinkPad",
+      "model": "T490"
+    },
+    {
+      "id": 2,
+      "category": "Laptop",
+      "manufacturer": "Lenovo",
+      "series": "Yoga",
+      "model": "Slim 7"
+    },
+    {
+      "id": 3,
+      "category": "Laptop",
+      "manufacturer": "Lenovo",
+      "series": "IdeaPad",
+      "model": "5 Pro"
+    },
+    {
+      "id": 4,
+      "category": "Laptop",
+      "manufacturer": "Lenovo",
+      "series": "ThinkBook",
+      "model": "Gen 2"
+    },
+    {
+      "id": 5,
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "series": "MacBook",
+      "model": "Pro"
+    },
+    {
+      "id": 6,
+      "category": "Laptop",
+      "manufacturer": "Apple",
+      "series": "MacBook",
+      "model": "Air"
+    },
+    {
+      "id": 7,
+      "category": "Headset",
+      "manufacturer": "Logitech",
+      "series": "Pro",
+      "model": "750"
+    },
+    {
+      "id": 8,
+      "category": "Headset",
+      "manufacturer": "Sony",
+      "series": "WH",
+      "model": "XB900N"
+    },
+    {
+      "id": 9,
+      "category": "Headset",
+      "manufacturer": "Sony",
+      "series": "WH",
+      "model": "1000XM4"
+    },
+    {
+      "id": 10,
+      "category": "Headset",
+      "manufacturer": "Logitech",
+      "series": "Zone",
+      "model": "H820E"
+    },
+    {
+      "id": 11,
+      "category": "Mouse",
+      "manufacturer": "Logitech",
+      "series": "Wireless",
+      "model": "M170"
+    },
+    {
+      "id": 12,
+      "category": "Mouse",
+      "manufacturer": "Logitech",
+      "series": "Triathlon",
+      "model": "M720"
+    },
+    {
+      "id": 13,
+      "category": "Mouse",
+      "manufacturer": "Logitech",
+      "series": "MX",
+      "model": "Anywhere 3"
+    },
+    {
+      "id": 14,
+      "category": "Mouse",
+      "manufacturer": "Turbo-X",
+      "series": "Egg",
+      "model": "700"
+    },
+    {
+      "id": 15,
+      "category": "Mouse",
+      "manufacturer": "Turbo-X",
+      "series": "Cross",
+      "model": "H200"
+    },
+    {
+      "id": 16,
+      "category": "Mouse",
+      "manufacturer": "Lenovo",
+      "series": "Wireless",
+      "model": "N3903"
+    },
+    {
+      "id": 17,
+      "category": "Accessories",
+      "manufacturer": "Natec",
+      "series": "Impala",
+      "model": "NTO-0359",
+      "type": "bag"
+    },
+    {
+      "id": 18,
+      "category": "Accessories",
+      "manufacturer": "Lenovo",
+      "series": "B210",
+      "model": "GX40Q17225 BK",
+      "type": "backpack"
+    }
+  ]
+}

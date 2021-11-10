@@ -18,10 +18,14 @@ export class UsersListComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
-  mapFn = (user: IUser) => user.name;
+  mapFn = (user: IUser) => this.fullName(user);
 
   ngOnInit() {
     this.users$ = this.route.data.pipe(map((data: any) => data.users));
+  }
+
+  fullName(user: IUser) {
+    return `${user.firstName} ${user.lastName}`;
   }
 
   trackById(index: number, user: IUser) {

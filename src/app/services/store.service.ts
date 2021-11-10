@@ -34,6 +34,4 @@ export class StoreService {
   public setCurrentUser(value: IUser) {
     this._currentUser$.next(value);
   }
-
-
 }

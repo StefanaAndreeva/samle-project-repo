@@ -30,6 +30,10 @@ export class InventoryViewComponent implements OnInit {
       );
   }
 
+  userName(user: IUser) {
+    return `${user.firstName} ${user.lastName}`;
+  }
+
   trackById(index: number, user: IUser) {
     return user.id;
   }

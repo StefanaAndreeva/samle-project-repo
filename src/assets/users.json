@@ -2,79 +2,92 @@
   "users": [
     {
       "id": 1,
-      "name": "Stefana Andreeva",
+      "firstName": "Stefana",
+      "lastName": "Andreeva",
       "email": "sandreeva@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 2,
-      "name": "Verzhiniya Andreeva",
+      "firstName": "Verzhiniya",
+      "lastName": "Andreeva",
       "email": "vandreeva@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 3,
-      "name": "Radoslav Karaivanov",
+      "firstName": "Radoslav",
+      "lastName": "Karaivanov",
       "email": "rkaraivanov@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 4,
-      "name": "Vasil Georgiev",
+      "firstName": "Vasil",
+      "lastName": "Georgiev",
       "email": "vgeorgiev@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 5,
-      "name": "Petko Bozhinov",
+      "firstName": "Petko",
+      "lastName": "Bozhinov",
       "email": "pbozhinov@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 6,
-      "name": "Maria Atanasova",
+      "firstName": "Maria",
+      "lastName": "Atanasova",
       "email": "matanasova@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 7,
-      "name": "Monika Stefanova",
+      "firstName": "Monika",
+      "lastName": "Stefanova",
       "email": "mstefanova@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 8,
-      "name": "Ivan Ivanov",
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
       "email": "iivanov@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 9,
-      "name": "Konstantin Kolev",
+      "firstName": "Konstantin",
+      "lastName": "Kolev",
       "email": "kkolev@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 10,
-      "name": "Aleksander Ganchev",
+      "firstName": "Aleksander",
+      "lastName": "Ganchev",
       "email": "aganchev@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 11,
-      "name": "Hristina Manolova",
+      "firstName": "Hristina",
+      "lastName": "Manolova",
       "email": "hmanolova@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 12,
-      "name": "Kiril Stoyanov",
+      "firstName": "Kiril",
+      "lastName": "Stoyanov",
       "email": "kstoyanov@it-economics.bg",
       "role": "viewer"
     },
     {
       "id": 13,
-      "name": "Admin",
+      "firstName": "Admin",
+      "lastName": "Admin",
       "email": "admin@it-economics.bg",
       "role": "admin"
     }

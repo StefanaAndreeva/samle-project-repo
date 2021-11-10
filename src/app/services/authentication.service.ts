@@ -33,7 +33,7 @@ export class AuthenticationService implements OnDestroy{
 
   login(username: string, password: string) {
     const currentUser = this.allowedUsers.find(u => u.email === username);
-    if (currentUser && password == FAKE_PASSWORD) {
+    if (currentUser && password === FAKE_PASSWORD) {
       this.store.setCurrentUser(currentUser);
       localStorage.setItem("token", "my-super-secret-token-from-server");
       return of(new HttpResponse({ status: 200 }));
@@ -47,9 +47,6 @@ export class AuthenticationService implements OnDestroy{
   }
 
   isUserLoggedIn() {
-    if (localStorage.getItem("token") != null) {
-      return true;
-    }
-    return false;
+    return localStorage.getItem("token") !== null;
   }
 }

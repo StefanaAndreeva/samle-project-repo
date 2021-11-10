@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IItem } from 'src/app/models/item';
+import { IInventoryItem } from 'src/app/models/item';
 
 @Component({
   selector: 'app-item-detail',
@@ -7,5 +7,5 @@ import { IItem } from 'src/app/models/item';
   styleUrls: ['./item-detail.component.scss']
 })
 export class ItemDetailComponent {
-  @Input() items!: IItem[];
+  @Input() items!: IInventoryItem[];
 }

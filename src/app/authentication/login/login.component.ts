@@ -21,7 +21,7 @@ export class LoginComponent implements OnDestroy {
   ) {
     this.route.queryParams
     .pipe(takeUntil(this._destroy$))
-    .subscribe(params => {
+    .subscribe(() => {
       this.navigationUrl = this.router.getCurrentNavigation()?.extras.state?.url ?? '/';
     })
   }
@@ -30,7 +30,6 @@ export class LoginComponent implements OnDestroy {
     this._destroy$.next(true);
     this._destroy$.complete();
   }
-
 
   login(username: string, password: string) {
     this.authService.login(username, password)

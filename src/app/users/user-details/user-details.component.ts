@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { IItem } from 'src/app/models/item';
 import { IUser } from 'src/app/models/user';
-import { InventoryManagementService } from 'src/app/services/inventory-management.service';
 import { StoreService } from 'src/app/services/store.service';
+import { UsersManagementService } from 'src/app/services/users-management.service';
 import { CustomPopupComponent } from 'src/app/shared/custom-popup/custom-popup.component';
 
 @Component({
@@ -29,13 +29,13 @@ export class UserDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private store: StoreService,
-    private inventoryService: InventoryManagementService,
+    private usersService: UsersManagementService,
   ) {}
 
   ngOnInit() {
     this.user$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        return this.inventoryService.getUsersWithInventory()
+        return this.usersService.getUsersWithInventory()
           .pipe(
             tap(() => this.showAddInventoryItem = false),
             map(users => {
@@ -46,12 +46,16 @@ export class UserDetailsComponent implements OnInit {
     );
   }
 
+  getFullName(user: IUser) {
+    return `${user.firstName} ${user.lastName}`;
+  }
+
   getItem(items: IItem[], category: string) {
     return items.find(e => e.category === category);
   }
 
   getItemInfo(item: IItem) {
-    return `${item.details?.manufacturer} - ${item.details?.series} ${item.details?.model}`
+    return `${item?.manufacturer} - ${item?.series} ${item?.model}`
   }
 
   getAssignedDate(item: IItem) {

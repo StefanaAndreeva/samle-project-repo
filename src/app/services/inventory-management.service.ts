@@ -1,14 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { combineLatest, EMPTY, Observable, of } from 'rxjs';
-import { map, mergeMap } from 'rxjs/operators';
-import { IInventoryItemDef } from '../models/inventory';
-import { IItem } from '../models/item';
-import { IUser } from '../models/user';
-import { UsersManagementService } from './users-management.service';
+import { combineLatest, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { IInventoryItemDef } from '../models/definition';
+import { IInventoryItem } from '../models/item';
 
 const INVENTORY_DATA_ENDPOINT = 'assets/data.json';
-const INVENTORY_DEF_ENDPOINT = 'assets/inventory-definitions.json';
+const INVENTORY_DEF_ENDPOINT = 'assets/definitions.json';
+
+export interface IGroupedDefinitions {
+  category: string;
+  categoryItems: IInventoryItemDef[];
+}
 
 @Injectable({
   providedIn: 'root',
@@ -16,55 +19,48 @@ const INVENTORY_DEF_ENDPOINT = 'assets/inventory-definitions.json';
 export class InventoryManagementService {
 
   constructor(
-    private http: HttpClient,
-    private usersService: UsersManagementService,
+    private http: HttpClient
     ) { }
 
-  getAllItems(): Observable<IItem[]> {
-    return this.http.get<IItem[]>(INVENTORY_DATA_ENDPOINT)
+  getAllItems(): Observable<IInventoryItem[]> {
+    return this.http.get<IInventoryItem[]>(INVENTORY_DATA_ENDPOINT)
       .pipe(map((result: any) => result.items));
   }
 
   getInventoryDefinitions(): Observable<IInventoryItemDef[]> {
     return this.http.get<IInventoryItemDef[]>(INVENTORY_DEF_ENDPOINT)
-      .pipe(map((result: any) => result.inventory));
+      .pipe(map((result: any) => result.definitions));
   }
 
-  getUsersWithInventory(): Observable<IUser[]> {
+  getDefinitionsByCategory(): Observable<IGroupedDefinitions[]> {
     return combineLatest([
       this.getAllItems(),
       this.getInventoryDefinitions(),
-      this.usersService.getAllUsers(),
-    ]).pipe(
-      map(([items, definitions, users]) => {
-        users.forEach(user => {
-          user.inventory = items.filter(e => e.assignedTo === user.name);
-          user.inventory.forEach(item => {
-            const category = definitions.find(d => d.category === item.category);
-            item.details = category?.items.find(catItem => catItem.id === item.model);
-          });
-        });
-       return users;
-      }),
-      mergeMap(users => users ? of(users) : EMPTY));
-  }
-
-  getCategoriesItems(): Observable<IInventoryItemDef[]> {
-    return combineLatest([
-      this.getAllItems(),
-      this.getInventoryDefinitions()
     ]).pipe(
       map(([items, definitions]) => {
-        definitions.forEach(def => {
-          def.items.forEach(defItem => {
-            const allInstances = items.filter(itm => itm.category === def.category && itm.model === defItem.id);
-            const freeInstances = allInstances.filter(inst => inst.assignedTo === '');
-            defItem.count = allInstances.length;
-            defItem.free = freeInstances.length;
+        let groups: IGroupedDefinitions[] = [];
+        const uniqueCategories = this.getUniqueCategories(definitions);
+        uniqueCategories.forEach(categoryName => {
+          const catItems = definitions.filter(d => d.category === categoryName);
+          catItems.forEach(catItem => {
+            const all = items.filter(itm => itm.definitionId === catItem.id);
+            const free = all.filter(itm => itm.userId === null);
+            catItem.count = all.length;
+            catItem.free = free.length;
+          });
+          groups.push({
+            category: categoryName,
+            categoryItems: catItems
           });
         });
-        return definitions;
-      }),
-      mergeMap(definitions => definitions ? of(definitions) : EMPTY))
+        return groups;
+      })
+    )
+  }
+
+  getUniqueCategories(definitions: IInventoryItemDef[]) {
+    const uniqueCategories = new Set<string>();
+    definitions.forEach(d => uniqueCategories.add(d.category));
+    return uniqueCategories;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IInventoryItemDef } from 'src/app/models/inventory';
+import { IInventoryItemDef } from 'src/app/models/definition';
 import { InventoryManagementService } from 'src/app/services/inventory-management.service';
 import { CustomSelectComponent } from 'src/app/shared/custom-select/custom-select.component';
 
@@ -44,30 +44,30 @@ export class UserItemComponent implements OnInit {
   }
 
   getCategories(definitions: IInventoryItemDef[]) {
-    return definitions.map(def => def.category);
+    return Array.from(this.inventoryService.getUniqueCategories(definitions));
   }
 
   getModels(definitions: IInventoryItemDef[], category: string) {
-    const definition = definitions.find(def => def.category === category);
-    return definition?.items.map(e => `${e.manufacturer} ${e.series} ${e.model}`) || [];
+    const items = definitions.filter(def => def.category === category);
+    return items ? items.map(e => `${e.manufacturer} ${e.series} ${e.model}`) : [];
   }
 
   onItemAdd(definitions: IInventoryItemDef[]) {
     if (!this.actionButtonDisabled) {
-      const definition = definitions.find(def => def.category === this.categorySelect.selectedItem);
-      const models = definition?.items;
-      const id = models?.find(m => {
-        return this.modelSelect.selectedItem.includes(m.manufacturer)
-          && m.series && this.modelSelect.selectedItem.includes(m.series)
-          && m.model && this.modelSelect.selectedItem.includes(m.model);
-      })?.id;
+      // const definition = definitions.find(def => def.category === this.categorySelect.selectedItem);
+      // const models = definition?.items;
+      // const id = models?.find(m => {
+      //   return this.modelSelect.selectedItem.includes(m.manufacturer)
+      //     && m.series && this.modelSelect.selectedItem.includes(m.series)
+      //     && m.model && this.modelSelect.selectedItem.includes(m.model);
+      // })?.id;
 
-      if (this.categorySelect?.selectedItem && id) {
-        this.add.emit({
-          category: this.categorySelect?.selectedItem,
-          itemId: id
-        });
-      }
+      // if (this.categorySelect?.selectedItem && id) {
+      //   this.add.emit({
+      //     category: this.categorySelect?.selectedItem,
+      //     itemId: id
+      //   });
+      // }
     }
   }
 

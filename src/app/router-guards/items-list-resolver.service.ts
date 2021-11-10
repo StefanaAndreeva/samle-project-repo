@@ -6,22 +6,21 @@ import {
 } from '@angular/router';
 import { Observable, of, EMPTY } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
-import { IInventoryItemDef } from '../models/inventory';
-import { InventoryManagementService } from '../services/inventory-management.service';
+import { IGroupedDefinitions, InventoryManagementService } from '../services/inventory-management.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsListResolverService implements Resolve<IInventoryItemDef[]> {
+export class ItemsListResolverService implements Resolve<IGroupedDefinitions[]> {
 
   constructor(
     private inventoryService: InventoryManagementService,
     ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IInventoryItemDef[]> | Observable<never> {
-    return this.inventoryService.getCategoriesItems().pipe(
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IGroupedDefinitions[]> | Observable<never> {
+    return this.inventoryService.getDefinitionsByCategory().pipe(
       take(1),
-      mergeMap(items => items ? of(items) : EMPTY)
+      mergeMap(definitions => definitions ? of(definitions) : EMPTY)
     );
   }
 }

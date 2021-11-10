@@ -7,7 +7,7 @@
   </app-custom-link-buttom>
   <table class="table">
     <tr>
-      <td colspan="3">{{user.name}}</td>
+      <td colspan="3">{{getFullName(user)}}</td>
     </tr>
     <tr *ngFor="let item of user.inventory">
       <td>{{item.category | titlecase}}</td>

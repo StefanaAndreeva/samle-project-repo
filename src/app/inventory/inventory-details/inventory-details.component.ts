@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { IInventoryItemDetails } from 'src/app/models/inventory';
+import { IItem } from 'src/app/models/item';
 import { IUser } from 'src/app/models/user';
 import { CustomDetailsListItemComponent, ICustomDetailsListItemSelectedEventArg } from 'src/app/shared';
 import { InventoryViewStateService } from '../inverntory-view-state.service';
@@ -20,6 +20,10 @@ export class InventoryDetailsComponent implements OnInit, OnDestroy {
 
   private _destroy$ = new Subject<boolean>();
 
+  get userName() {
+    return `${this.user.firstName} ${this.user.lastName}`;
+  }
+
   constructor(
     private inventoryViewState: InventoryViewStateService,
   ) { }
@@ -37,7 +41,7 @@ export class InventoryDetailsComponent implements OnInit, OnDestroy {
     });
   }
 
-  getItemInfo(item: IInventoryItemDetails) {
+  getItemInfo(item: IItem) {
     return `${item.series} ${item.model}`
   }
 

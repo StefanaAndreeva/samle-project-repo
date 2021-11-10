@@ -14,29 +14,29 @@
         (buttonClick)="newCategoryPopup.open()">
       </app-custom-link-buttom>
     </div>
-    <app-custom-details-list
+    <app-custom-details-list *ngIf="groups$ | async as groups"
       [hasExpandCollapseButtons]="true"
       [headerText]="'Inventory Categories'"
       [height]="'90%'">
       <app-custom-details-list-item #items
-        *ngFor="let definition of definitions"
-        [text]="definition.category | titlecase">
+        *ngFor="let group of groups"
+        [text]="group.category | titlecase">
         <div class="list-content">
             <table class="table">
               <tr>
                 <th>Model</th>
-                <th *ngIf="definition.category === 'accessories'">Type</th>
+                <th *ngIf="group.category === 'Accessories'">Type</th>
                 <th>Total</th>
                 <th>Unsassigned</th>
                 <th></th>
               </tr>
-              <tr *ngFor="let item of definition.items">
+              <tr *ngFor="let item of group.categoryItems">
                 <td>{{item.manufacturer | titlecase}} {{item.series}} {{item.model}}</td>
-                <td class="number" *ngIf="definition.category === 'accessories'">{{item.type}}</td>
+                <td class="number" *ngIf="group.category === 'Accessories'">{{item.type}}</td>
                 <td class="number">{{item.count}}</td>
                 <td class="number">{{item.free}}</td>
                 <td align="center" valign="center">
-                  <app-custom-button (buttonClick)="openDetailsView(definition.category, item)">
+                  <app-custom-button (buttonClick)="openDetailsView(item)">
                     View details
                   </app-custom-button>
                 </td>
@@ -58,7 +58,7 @@
     [disableActionButton]="isAddNewDefButtonDisabled(def)"
     [title]="'New item definition'"
     (popupClose)="addNewItemDefinition($event)">
-    <app-add-item-definition #def [categories]="getCategories(definitions)">
+    <app-add-item-definition  #def [categories]="getCategories(definitions)">
     </app-add-item-definition>
   </app-custom-popup>
   <app-custom-popup #newCategoryPopup

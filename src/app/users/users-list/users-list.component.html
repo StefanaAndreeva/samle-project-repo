@@ -10,10 +10,10 @@
           [routerLinkActive]="'selected'">
           <div class="item">
             <a [routerLink]="[user.id]">
-              <app-custom-avatar [initials]="user.name | initials">
+              <app-custom-avatar [initials]="fullName(user) | initials">
               </app-custom-avatar>
               <div class="content">
-                <span>{{user.name}}</span>
+                <span>{{fullName(user)}}</span>
                 <span>{{user.email}}</span>
               </div>
             </a>
