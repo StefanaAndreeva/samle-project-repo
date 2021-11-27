@@ -9,25 +9,21 @@ import { InventoryViewStateService } from '../inverntory-view-state.service';
 @Component({
   selector: 'app-inventory-view',
   templateUrl: './inventory-view.component.html',
-  styleUrls: ['./inventory-view.component.scss']
+  styleUrls: ['./inventory-view.component.scss'],
 })
 export class InventoryViewComponent implements OnInit {
-
   users$!: Observable<IUser[]>;
 
   @ViewChildren('items', { read: CustomDetailsListItemComponent })
   items!: QueryList<CustomDetailsListItemComponent>;
 
-  constructor(
-    private route: ActivatedRoute,
-    public inventoryViewState: InventoryViewStateService,
-  ) { }
+  constructor(private route: ActivatedRoute, public inventoryViewState: InventoryViewStateService) {}
 
   ngOnInit() {
     this.users$ = this.route.data.pipe(
       tap(() => this.inventoryViewState.setSelectedUser(null)),
       map((data: any) => data.users)
-      );
+    );
   }
 
   userName(user: IUser) {
@@ -40,6 +36,6 @@ export class InventoryViewComponent implements OnInit {
 
   onShowDetails(item: CustomDetailsListItemComponent, user: IUser) {
     this.inventoryViewState.setSelectedUser(user);
-    this.items.forEach(itm => itm.isSelected = itm === item);
+    this.items.forEach((itm) => (itm.isSelected = itm === item));
   }
 }
