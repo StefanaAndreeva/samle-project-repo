@@ -51,6 +51,9 @@ and
 * avoid any caching, business logic or data manipulation here
 * don’t let the async service know about the state management logic
 
+![Diagram](https://dev-academy.com/angular-architecture-best-practices/flowAbstract.gif)
+
+
 ## Vertical division - modular design
 * vertical separation into feature modules
 * each feature module shares the same horizontal separation of the core, abstraction, and presentation layer
@@ -59,7 +62,6 @@ and
 ##### Two additional modules:
 -	CoreModule - defines our singleton services, single-instance components, configuration, and export any third-party modules needed in AppModule. This module is imported only once in AppModule. 
 -	SharedModule - contains common components/pipes/directives and also export commonly used Angular modules (like CommonModule). SharedModule can be imported by any feature module.
-
 
 
 ## ENTERPRISE ANGULAR MONOREPO PATTERN
@@ -71,6 +73,7 @@ and
 ### Nx Workspace 
 * consists of a single git repository with folders for apps (applications) and libs (libraries)
 * a monorepo can contain multiple applications and multiple libraries
+* can  impose constraints on how projects can depend on each other - tags
 
 ### Application
 * an app produces a binary
@@ -83,7 +86,7 @@ and
 
 ### Library
 * a set of files packaged together that is consumed by apps
-* similar to node modules or nuget packages, can be published to NPM or bundled with a deployed application as-is 
+* similar to node modules or nuget packages, can be published to NPM or bundled with a deployed application as-is (pushable libraries)
 * libraries are either "app-specific" (used only by a particular app) or shared (shared things can be app specific and completely shared generic functionality)
 * libraries are organized by scope (app-specific or shared) and type in the libs directory
 * a typical Nx workspace contains only four (4) types of libs: feature, data-access, ui, and util
@@ -95,15 +98,79 @@ and
 ##### Ui libraries 
 * hold presentational components which are used by the feature components in the feature lib
 * do not know data-services, they are getting the data passed in via @Input() decorated properties and help us to show the data they received
-* They only care about how things have to look, not where the data comes from
+* they only care about how things have to look, not where the data comes from
 
 ##### Data-Access libraries 
 * abstracting the data access and calls to a backend API like NodeJS, ASP.NET Core, etc. 
-* all files related to state management also reside in a data-access folder (by convention, they can be grouped under a +state folder under src/lib).
+* all files related to state management also reside in a data-access folder (by convention, they can be grouped under a +state folder under src/lib)
 
 ##### Utility libraries
 * things which are shared over that feature
-* if you need some services over the complete feature, this is your place. 
+* if you need some services over the complete feature, this is your place
+* there is no framework-specific code, the library is simply a collection of utilities or pure functions
+
+##### Domain (additional)
+* main logic of the domain
+* contains the domain models (classes, interfaces, types) that are used by the domain 
+* provides façade services for maintaining encapsulation.
+
+## Example
+In terms of the Monorepo vertical division (feature modules) can be seen as MFE apps that organize the libraries, which implement all the logic from the layerd architecture - core, abstract and presentation layers (horizontal division)
 
 
+├── apps
+  
+    ├── user-manager-app
+  
+    └── user-manager-app-e2e
 
+
+├── libs
+
+    ├── user-manager-app                    <---- grouping folder (by scope - domain)
+    
+        ├── domain                          <---- lib (abstraction layer - facade)
+    
+        ├── feature-user-manager            <---- lib (presentationl layer - smart components)
+    
+        ├── ui                              <---- lib (presentationl layer - dump components)
+        
+        ├── data-access                     <---- lib (core layer - async services + state)
+    
+        └── util                            <---- lib (specific util functions if any)
+
+
+    ├── shared                              <---- grouping folder (by scope - shared)
+    
+        ├── 3rd-party-ui-components-lib     <---- lib (completely-generic, pushable)
+        
+        ├── custom-ui-components-lib        <---- lib (completely-generic, pushable)
+        
+        ├── styles                          <---- lib (completely-generic, pushable)
+        
+        ├── global-error-handler            <---- lib (completely-generic, pushable)
+        
+        ├── authentication                  <---- lib (completely-generic, pushable)
+        
+        ├── custom-form-validators          <---- lib (completely-generic, pushable)
+        
+        ├── custom-form-controls            <---- lib (completely-generic, pushable)
+        
+        ├── localization                    <---- lib (completely-generic, pushable)
+        
+        ├── testing-helpers                 <---- lib (completely-generic, pushable)
+        
+        ├── assets                          <---- lib (completely-generic, pushable)
+        
+        ├── environment                     <---- lib (completely-generic)
+             
+        ├── user-manager-app                <---- grouping folder (the domain)  
+        
+            ├── feature-shell               <---- lib (not-generic-but-shared)
+            
+            ├── feature-dashboard           <---- lib (not-generic-but-shared)
+    
+            └── data-access                 <---- lib (not-generic-but-shared)
+
+
+ 
